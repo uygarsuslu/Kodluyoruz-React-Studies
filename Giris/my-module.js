@@ -12,7 +12,6 @@ const cikar = (a, b) => a - b;
 
 // index.js dosyasinda kullanmak için dışa aktarmamız lazım //
 export default hello
-//export {hello, topla, cikar};
 // export default topla;
 export {topla, cikar, text, user, users}
 
@@ -40,7 +39,6 @@ const users = [
 function topla(a, b){
     return a + b;
 }
-// index.js dosyasinda kullanmak için dışa aktarmamız lazım //
 export default topla;
 */
 

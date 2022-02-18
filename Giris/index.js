@@ -1,11 +1,12 @@
 /*
 // bu kütüphane bizim verdiğimiz string'in arasında boşluk varsa arasına "-" koyar //
 // 2. parametre verilirse arasına onu koyar //
-import slugify from "slugify";
+import slugify from "slugify"; // var slugify = require("slugify");
 const title = slugify('some string', "*") // some-string
 console.log(title)
 */
 
+// my-module.js dosyasında değişiklikleri aldık //
 import hello, {topla, cikar, text, user, users} from './my-module.js'
 console.log(topla(2, 4));
 console.log(cikar(4, 2));
