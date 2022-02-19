@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/uygarsuslu/Kodluyoruz-React-Studies#readme",
   "dependencies": {
+    "axios": "^0.26.0",
     "node-fetch": "^3.2.0",
     "slugify": "^1.6.5"
   }
