@@ -8,6 +8,8 @@ const surname = "Seven";
 // const isLoggedIn = true;
 const isLoggedIn = false;
 
+
+// KOŞULLU RENDER İŞLEMİ //
 function App() {
 
   return (
@@ -15,6 +17,8 @@ function App() {
       <h1>{isLoggedIn ? `Benim adım  ${name}, soyadım ${surname}` : "Giris Yapmadınız"} </h1>
       {/* <h1>{isLoggedIn && `Benim adım  ${name}, soyadım ${surname}`} </h1>
       <h1>{!isLoggedIn && "Giris Yapmadınız"}</h1> */}
+
+      {/* NORMAL RENDER İLEMİ */}
       {/* <h1>{`Benim adım  ${name}, soyadım ${surname}`} </h1> */}
       {/* <h1>{name} {surname} </h1> */}
     </>
@@ -22,8 +26,7 @@ function App() {
 }
 export default App;
 
-
-
+/* ************************************************************************************************************ */
 
 /*
 // SIFIRDAN BİR COMPONENT YAZILMASI //
@@ -48,7 +51,7 @@ function App() {
 export default App;
 */
 
-
+/* ************************************************************************************************************ */
 
 // import logo from './logo.svg';
 // import './App.css';
