@@ -2,11 +2,32 @@ import './App.css';
 // import React from "react"
 import Header from './components/header'
 
-// SIFIRDAN BİR COMPONENT YAZILMASI //
+// DEGİSKEN VEYA SABİTİN RENDER EDİLMESİ //
+const name = "Mehmet";
+const surname = "Seven";
+// const isLoggedIn = true;
+const isLoggedIn = false;
+
 function App() {
 
-  // return React.createElement("div", null, "Hello") //
+  return (
+    <>
+      <h1>{isLoggedIn && `Benim adım  ${name}, soyadım ${surname}`} </h1>
+      <h1>{!isLoggedIn && "Giris Yapmadınız"}</h1>
+      {/* <h1>{`Benim adım  ${name}, soyadım ${surname}`} </h1> */}
+      {/* <h1>{name} {surname} </h1> */}
+    </>
+  )
+}
+export default App;
 
+
+
+
+/*
+// SIFIRDAN BİR COMPONENT YAZILMASI //
+function App() {
+  // return React.createElement("div", null, "Hello") //
   return (
     <>
       <h1>Hello React</h1>
@@ -23,9 +44,8 @@ function App() {
     </>
   )
 }
-
 export default App;
-
+*/
 
 
 
