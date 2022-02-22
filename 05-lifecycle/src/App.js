@@ -43,7 +43,7 @@
 
 /* ********************************************************************************************************** */
 
-// CONPONENT UNMOUNT //
+// COMPONENT UNMOUNT //
 
 import { useState } from "react";
 import Counter from "./components/Counter"
