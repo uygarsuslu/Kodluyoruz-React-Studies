@@ -1,4 +1,4 @@
-// CONPONENT UNMOUNT //
+// COMPONENT UNMOUNT //
 
 // component'i unmount ettikten sonra o component'i tekrardan güncellemeye çalışabilecek ne varsa o işlemleri durdurur //
 
