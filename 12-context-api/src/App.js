@@ -45,11 +45,34 @@
 
 // ********** THEME SWİTCHER ********** //
 
+// import './App.css';
+// import Container from './components/Container';
+
+// // import ThemeContext from './context/ThemeContext';
+// import { ThemeProvider } from './context/ThemeContext';
+
+// // provider = sağlayıcı //
+// // render edilen bütün komponentlere provide edilen bütün dataları gönderebilmem gerekiyor //
+
+// function App() {
+//   return (
+//     <ThemeProvider>
+//       <Container />
+//     </ThemeProvider>
+//   )
+// }
+// export default App;
+
+/* ******************************************************************************************************* */
+
+// ********** MULTI CONTEXT ********** //
+
 import './App.css';
 import Container from './components/Container';
 
 // import ThemeContext from './context/ThemeContext';
 import { ThemeProvider } from './context/ThemeContext';
+import { UserProvider } from "./context/UserContext";
 
 // provider = sağlayıcı //
 // render edilen bütün komponentlere provide edilen bütün dataları gönderebilmem gerekiyor //
@@ -57,7 +80,9 @@ import { ThemeProvider } from './context/ThemeContext';
 function App() {
   return (
     <ThemeProvider>
-      <Container />
+      <UserProvider>
+        <Container />
+      </UserProvider>
     </ThemeProvider>
   )
 }
