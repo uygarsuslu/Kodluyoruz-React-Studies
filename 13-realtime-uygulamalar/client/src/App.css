@@ -1,0 +1,21 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.palette {
+  display: flex;
+  flex-direction: column;
+}
+
+.palette button {
+  margin-top: 10px;
+}
+
+.h1 {
+  text-align: center;
+  color: rgb(53, 70, 64);
+}
