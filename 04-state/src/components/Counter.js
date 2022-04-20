@@ -44,7 +44,7 @@ import { useState } from 'react'
 function Counter() {
     const [count, setCount] = useState(0)
 
-    // jquery-exampl.html dosyasında jquery ile react kıyaslaması yaptık //
+    // jquery-example.html dosyasında jquery ile react kıyaslaması yaptık //
     // butona tıklayınca 0'ı 1 yapsın //
     // sadece 1 kere render eder //
     const increase = () => {
