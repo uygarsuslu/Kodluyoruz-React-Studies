@@ -38,7 +38,8 @@ import axios from "axios";
 //     })
 // }
 // getComments()
-//     .then((data) => console.log(data)) // burda resolve'un içindeki data geldi ve onu console ile yazdırdım. Ekrana comments yazdı. Bu demek oluyorki resolve ile geçilen parametre then'e düştü. Burda string number ve objede dönebiliriz.
+//     .then((data) => console.log(data))
+// burda resolve'un içindeki data geldi ve onu console ile yazdırdım. Ekrana comments yazdı. Bu demek oluyorki resolve ile geçilen parametre then'e düştü. Burda string number ve obje de dönebiliriz.
 //     .catch((e) => console.log("e")); 
 
 // *********************************************************************************************************** //
@@ -78,47 +79,40 @@ const getPost = (post_id) => {
 }
 
 // Peki burda bir hata varsa bunu nasıl yakalıcaz. Try catch blogları ile 
+(async () => {
+
+    try {
+        const users = await getUsers()
+        const post = await getPost(1)
+
+        console.log(users)
+        console.log(post);
+    }
+    catch (e) {
+        console.log(e);
+    }
+})()
+
+// aşağıdaki then ve catch'den kurtulmak için yukardaki gibi yaparız.
+
 // (async () => {
 
-//     try {
-//         const users = await getUsers()
-//         const post = await getPost(1)
+//     await getUsers()
+//         .then((data) => console.log(data))
+//         .catch(e => console.log(e));
 
-//         console.log(users)
-//         console.log(post);
-//     }
-//     catch (e) {
-//         console.log(e);
-//     }
+//     await getPost(1)
+//         .then((data) => console.log(data))
+//         .catch(e => console.log(e));
 // })()
 
-        // aşağıdaki then ve catch'den kurtulmak için yukardaki gibi yaparız.
-
-        // (async () => {
-
-        //     await getUsers()
-        //         .then((data) => console.log(data))
-        //         .catch(e => console.log(e));
-
-        //     await getPost(1)
-        //         .then((data) => console.log(data))
-        //         .catch(e => console.log(e));
-        // })()
-
+// ******************************************************************************************************** //        
 
 // promise.all ifadesiyle tüm promise'leri çalıştırıp sonucu bekleyebilirim 
 // bu elimizde birden fazla sıralı çalıştırmak istediğimiz promise dizisi varsa kullanabileceğimiz yöntem
-
-Promise.all([getUsers(), getPost(1)])
-    .then(console.log)
-    .catch(console.log)
-
-
-
-
-
-
-
+         
+// Promise.all([getUsers(), getPost(1)])
+//     .then(console.log)
+//     .catch(console.log)
 
 // *********************************************************************************************************** //
-

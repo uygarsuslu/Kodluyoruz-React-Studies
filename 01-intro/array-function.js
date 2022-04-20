@@ -21,7 +21,7 @@ for (let i = 0; i < users.length; i++) {
     console.log(users[i]);
 }
 
-// map fonksiyonu diyor ki senin elle vermene gerek yok ben zaten hepsini tek tek dönücem diyor
+// map fonksiyonu senin elle değer vermene gerek yok ben zaten hepsini tek tek döneceğim diyor
 users.map((item) => { console.log(item); })
 
 // veya array'in içinde objeler olsaydı.
@@ -100,7 +100,7 @@ console.log(filtered)
 // *********************************************************************************************************** //
 
 /*
-// SOME // //array'in içersindeki elemanlardan biri verdiğimiz koşula uyuyorsa true döner uymuyorsa false döner //
+// SOME // // array'in içersindeki elemanlardan biri verdiğimiz koşula uyuyorsa true döner uymuyorsa false döner //
 
 const users = [
     {
