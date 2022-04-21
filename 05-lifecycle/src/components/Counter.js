@@ -8,12 +8,11 @@ function Counter() {
 
     const [number, setNumber] = useState(0)
 
-    // if yapısının içinde çalışmaz - useEffect ve useState //
     useEffect(() => {
         console.log("Component mount edildi")
 
         const interval = setInterval(() => {
-            // n parametresi number'ın o anda ifade etmiş olduğu değer //
+            // n parametresi number'in o anda ifade etmiş olduğu değer //
             setNumber((n) => n + 1);
         }, 1000)
 
@@ -36,4 +35,3 @@ function Counter() {
     )
 }
 export default Counter
-
