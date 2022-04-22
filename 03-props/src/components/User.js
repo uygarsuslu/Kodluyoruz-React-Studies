@@ -1,12 +1,13 @@
 // PROPS NEDİR? NASIL KULLANILIR? //
 
-// function User({name, surname, isLoggedIn, age}) { // (props) //
+// function User(props) { // (props) //
 //     return (
 //         <h1>
 //             {
-//                 isLoggedIn ? `${name} ${surname} ${age}` : "Giris Yapmadınız"
+//                 props.isLoggedIn ? `${props.name} ${props.surname} ${props.age}` : "Giris Yapmadınız"
 //                 // props.isLoggedIn ? `${props.name} ${props.surname}` : "Giris Yapmadınız"
 //             }
+//             {props.children}
 //         </h1>
 //     )
 // }

@@ -7,7 +7,7 @@
 // function App() {
 //   return (
 //     <>
-//       <User name="Mehmet" surname="Seven" isLoggedIn={true} age={29} />
+//       <User name="Mehmet" surname="Seven" isLoggedIn={true} age={29}  > asdassdffdd </User>
 //     </>
 //   );
 // }
