@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 import A from "./components/A";
@@ -9,13 +8,8 @@ function App() {
     <div className="App">
       <header className="App-header">
 
-
-<A />
-<B />
-
-
-
-
+        <A />
+        <B />
 
         {/* <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -32,5 +26,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
