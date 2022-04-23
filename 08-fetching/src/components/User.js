@@ -1,6 +1,8 @@
 // NATIVE FETCH //
 // herhangi bir veri kaynağına gidip o veri kaynağındaki ilgili veriyi aldıktan sonra ekranımızda nasıl gösterebiliriz //
 
+// body stringfy olarak verilir biz json'a elle çeviririz
+
 // import { useEffect, useState } from 'react'
 
 // function User() {
@@ -12,8 +14,7 @@
 //   useEffect(() => {
 //     fetch("https://jsonplaceholder.typicode.com/users")
 //       .then((res) => res.json()) // body'i stingfy olarak verdiği için json'a çevirme işlemi //
-//       .then((data) => {
-//         setUsers(data);
+//       .then((data) => { setUsers(data);
 //         // setIsLoading(false); // liste yüklendikten sonra loading yazısını kaldırma YÖNTEM 1 //
 //         // .then((users) => console.log(users))
 //       })
@@ -55,7 +56,7 @@ function User() {
     axios("https://jsonplaceholder.typicode.com/users")
       .then((res) => setUsers(res.data))
       .catch((e) => console.log(e))
-      .finally(() => setIsLoading(false)) // liste yüklendikten sonra loading yazısını kaldırma YÖNTEM 2 //
+      .finally(() => setIsLoading(false))
   }, [])
 
   return (
