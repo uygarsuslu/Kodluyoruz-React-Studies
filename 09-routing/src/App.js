@@ -14,6 +14,7 @@ function App() {
     <div>
       <nav>
         <ul>
+          {/* NavLink vererek tüm sayfanın değil sadece content'in yenilenmesini sağladık */}
           <li>
             <NavLink activeClassName="active" to="/">Home</NavLink>
           </li>
@@ -42,11 +43,13 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
 
-      {/* <Routes>
+      {/* 
+      <Switch>
         <Route path="/" exact component={<Home />} />
         <Route path="about" component={<About />} />
         <Route path="users" component={<Users />} />
-      </Routes> */}
+      </Switch> 
+      */}
     </div>
   );
 }
