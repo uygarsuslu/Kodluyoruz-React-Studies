@@ -24,6 +24,7 @@ function User() {
 
       <br />
       <br />
+      
       <button>
         {/* users/user yapmayı unutma app.js'de children olarak tanımladığımız için böyle yaptık */}
         <Link to={`/users/user/${parseInt(id) + 1}`}>
