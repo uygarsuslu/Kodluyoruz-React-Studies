@@ -35,7 +35,7 @@ function App() {
         {/* <Route path="" element={<Home />} /> */}
         <Route path="about" element={<About />} />
         <Route path="users" element={<Users />} >
-          {/* burada id parametresini vermeyi unutma!!!
+          {/* burada id parametresini vermeyi unutma!!
           children olarak vermezsek "outlet" kullanılamıyor */}
           <Route path="user/:id" element={<User />} />
         </Route>
