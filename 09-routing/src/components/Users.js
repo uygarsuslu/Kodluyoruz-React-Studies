@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import axios from "axios";
 
 function Users() {
@@ -16,13 +16,16 @@ function Users() {
     <div>
       <h1>Users</h1>
       {loading && <div>Loading...</div>}
+
       <ul>
         {users.map((user) => (
           <li key={user.id}>
-            <Link to={`user/${user.id}`}>{user.name}</Link>
+            <NavLink to={`user/${user.id}`}>{user.name}</NavLink>
           </li>
         ))}
       </ul>
+      
+      {/* NESTED ROUTES */}
       <Outlet />
     </div>
 
@@ -37,7 +40,7 @@ function Users() {
     //     <li>
     //       <Link to="/user/3">User 3</Link>
     //     </li>
-    //   </ul>
+    // </ul>
   );
 }
 export default Users;

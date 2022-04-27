@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, Link, Outlet } from "react-router-dom";
+import { useParams, Outlet, NavLink } from "react-router-dom";
 import axios from "axios";
 
 function User() {
@@ -12,7 +12,7 @@ function User() {
     axios(`https://jsonplaceholder.typicode.com/users/${id}`)
       .then((res) => setUser(res.data))
       .finally(() => setLoading(false));
-  }, [id]); // id eklemeyi unutma //
+  }, [id]); // id ekleyerek button'a basınca diğer kullanıcılara gitmesini sağladık //
 
   return (
     <div>
@@ -27,10 +27,12 @@ function User() {
       
       <button>
         {/* users/user yapmayı unutma app.js'de children olarak tanımladığımız için böyle yaptık */}
-        <Link to={`/users/user/${parseInt(id) + 1}`}>
+        <NavLink to={`/users/user/${parseInt(id) + 1}`}>
           Next User({parseInt(id) + 1})
-        </Link>
+        </NavLink>
       </button>
+      
+      {/* NESTED ROUTES */}
       <Outlet />
     </div>
 
