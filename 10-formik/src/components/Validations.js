@@ -1,4 +1,4 @@
-import { object, string, number, date, InferType, ref, ValidationError } from 'yup';
+import { object, string, ref } from 'yup';
 
 // initial values kısmında verdiğimiz keyler ne ise burdada onu vermeliyiz password ise burdada password böylece eşleşiyor //
 // required = bunu yaparak boş bırakmamasını sağlıyoruz //
@@ -6,9 +6,9 @@ import { object, string, number, date, InferType, ref, ValidationError } from 'y
 // email ve required içine özel mesajlar verebiliriz //
 
 const Validations = object({
-    email: string().email("Geçerli bir email girin").required("Zorunlu Alan"),
-    password: string().min(5, "Parolanız en az 5 karekter olmalıdır.").required("Zorunlu Alan"),
-    passwordConfirm: string().oneOf([ref("password")], "Parolalar uyuşmuyor").required("Zorunlu Alan"),
+    email: string().email("email must be a valid email").required("required field"),
+    password: string().min(5, "password must be at least 5 characters").required("password is a required field"),
+    passwordConfirm: string().oneOf([ref("password")], "passwords do not match").required("passwordConfirm is a required field"),
 });
 
 export default Validations;
