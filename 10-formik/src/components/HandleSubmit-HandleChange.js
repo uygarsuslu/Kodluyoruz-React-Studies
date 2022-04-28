@@ -1,5 +1,7 @@
 // ********** handleSubmit & handleChange ********** 
 
+// formik'in vermiş olduğu Form ve Field componentlerini kullanmak yerine html'deki form ve input'u kullandık //
+
 // import işlemi //
 import { Formik } from 'formik';
 
