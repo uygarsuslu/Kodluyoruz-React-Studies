@@ -75,9 +75,9 @@ function Radio() {
                             {/* // DROPDOWN // */}
 
                             <select name='country' value={values.country} onChange={handleChange}>
-                                <option value="turkey">Turkey</option>
-                                <option value="england">England</option>
-                                <option value="usa">USA</option>
+                                <option value="Turkey">Turkey</option>
+                                <option value="England">England</option>
+                                <option value="Usa">USA</option>
                             </select>
 
                             <br />
