@@ -20,9 +20,11 @@ import './App.css';
 //         onSubmit={async (values) => {
 //           alert(JSON.stringify(values, null, 2));
 //         }}
+//         // onSubmit={ (values) => {
+//         //     console.log(values);
+//         //    }}
 //       >
 //         <Form>
-
 //           <label htmlFor="firstName">First Name</label>
 //           <Field name="firstName" placeholder="Jane" />
 //           <br />
@@ -38,10 +40,12 @@ import './App.css';
 //           <br />
 //           <button type="submit">Submit</button>
 //         </Form>
+        
 //       </Formik>
 //     </div>
 //   );
 // }
+// export default App;
 
 /* ******************************************************************************************************* */
 
@@ -92,14 +96,14 @@ import './App.css';
 
 // ********** FORM VALİDASYONLARI 1 ********** //
 
-import Formvalidasyonu1 from "./components/Formvalidasyonu1";
+import FormValidation from "./components/FormValidation";
 
 // npm install - S yup
 
 function App() {
     return (
         <div className="App">
-            <Formvalidasyonu1 />
+            <FormValidation />
         </div>
     );
 }
