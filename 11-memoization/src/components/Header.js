@@ -5,9 +5,8 @@
 // function Header({ number }) {
 //     console.log("Header Component Re-rendered");
 //     return (
-//         <div>Header - {number}
-//         </div>
-//         )
+//         <div>Header - {number}</div>
+//     )
 // }
 // export default React.memo(Header)
 
@@ -25,7 +24,7 @@
 //         <code>{JSON.stringify(data)}</code>
 //         </div>
 //         )
-// }
+//     }
 // export default React.memo(Header)
 
 /* ************************************************************************************************* */
