@@ -31,16 +31,18 @@
 // import Header from "./components/Header";
 
 // // YÖNTEM 1: fonksiyon dışına vererek gereksiz yere render edilmesini önler
+
 // // const data = {name:"Mehmet"}
 
 // function App() {
 
 //   const [number, setNumber] = useState(0)
 
-//   // YÖNTEM 2: gereksiz yere render edilmesini önler
+//   // YÖNTEM 2: bu data ancak dependency array'de belirtilen veriler değiştiği anda tekrar hesaplanır
+
 //   const data = useMemo(() => {
-//     return [{ name: "Mehmet", number }]
-//   }, [number])
+//     return [{ name: "Mehmet" }]
+//   }, [])
 
 //   return (
 //     <div className="App">
@@ -67,6 +69,8 @@
 //   const [text, setText] = useState("")
 
 //   // input'a bir şey girildiği anda render edilmesini önledik
+//   // bu data ancak dependency array'de belirtilen veriler değiştiği anda tekrar hesaplanır
+
 //   const data = useMemo(() => {
 //     return calculateObject(number);
 //   }, [number])
@@ -86,10 +90,11 @@
 //   );
 // }
 
+// //sadece number değiştiği anda return eder
 // function calculateObject(number) {
 //   console.log("Calculating...");
 
-//   for (let i = 0; i < 100000000; i++) { }
+//   for (let i = 0; i < 100000000; i++) {}
 //   console.log("Calculating completed!!");
 
 //   return { name: "Mehmet", number }
@@ -110,8 +115,9 @@ function App() {
   const [number, setNumber] = useState(0)
 
   const increment = useCallback(() => {
-    // render edilmemesi için "prevState" yapmalıyız
+    // her seferinde render edilmemesi için "prevState" yapmalıyız
     setNumber((prevState) => prevState + 1)
+    // setNumber(number + 1) 
   }, [])
 
   return (
