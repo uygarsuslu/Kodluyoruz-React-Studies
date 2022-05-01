@@ -1,24 +1,25 @@
-// ********** THEME SWİTCHER ********** //
+// ********** THEME SWİTCHER - CONTEXT PROVIDER SIDE EFFECTS ********** //
 
-// import { useContext } from 'react'
+import { useContext } from 'react'
 
-// import Button from "./Button";
-// import Header from "./Header";
+import Button from "./Button";
+import Header from "./Header";
 
-// import ThemeContext from "../context/ThemeContext";
+import ThemeContext from "../context/ThemeContext";
 
-// function Container() {
+function Container() {
 
-//     const { theme } = useContext(ThemeContext)
+    const { theme } = useContext(ThemeContext)
 
-//     return (
-//         <div className={`app ${theme}`}>
-//             <Button />
-//             <hr />
-//             <Header /></div>
-//     )
-// }
-// export default Container
+    return (
+        <div className={`app ${theme}`}>
+            <Button />
+            <hr />
+            <Header />
+        </div>
+    )
+}
+export default Container
 
 /* ******************************************************************************************************* */
 
@@ -52,24 +53,24 @@
 
 // ********** CUSTOM CONTEXT HOOK ********** //
 
-import Button from "./Button";
-import Header from "./Header";
+// import Button from "./Button";
+// import Header from "./Header";
 
-import { useTheme } from "../context/ThemeContext";
-import Profile from './Profile';
+// import { useTheme } from "../context/ThemeContext";
+// import Profile from './Profile';
 
-function Container() {
+// function Container() {
 
-    const { theme } = useTheme()
+//     const { theme } = useTheme()
 
-    return (
-        <div className={`app ${theme}`}>
-            <Button />
-            <hr />
-            <Header />
-            <hr />
-            <Profile />
-        </div>
-    )
-}
-export default Container
+//     return (
+//         <div className={`app ${theme}`}>
+//             <Button />
+//             <hr />
+//             <Header />
+//             <hr />
+//             <Profile />
+//         </div>
+//     )
+// }
+// export default Container
