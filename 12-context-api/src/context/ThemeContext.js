@@ -33,24 +33,24 @@
 
 // ********** THEME SWİTCHER ********** //
 
-// import { createContext, useState } from "react";
+import { createContext, useState } from "react";
 
-// const ThemeContext = createContext();
+const ThemeContext = createContext();
 
-// export const ThemeProvider = ({ children }) => {
+export const ThemeProvider = ({ children }) => {
 
-//     const [theme, setTheme] = useState("dark")
+    const [theme, setTheme] = useState("dark")
 
-//     const values = {
-//         theme,
-//         setTheme,
-//     }
+    const values = {
+        theme,
+        setTheme,
+    }
 
-//     return <ThemeContext.Provider value={values}>
-//         {children}
-//     </ThemeContext.Provider>
-// }
-// export default ThemeContext;
+    return <ThemeContext.Provider value={values}>
+        {children}
+    </ThemeContext.Provider>
+}
+export default ThemeContext;
 
 /* ******************************************************************************************************* */
 
@@ -64,6 +64,7 @@
 
 // export const ThemeProvider = ({ children }) => {
 
+//     // localStorage'de o anda bir şey yoksa light yazar
 //     const [theme, setTheme] = useState(localStorage.getItem("theme") || "light")
 
 //     useEffect(() => {
@@ -87,26 +88,26 @@
 
 // temayı dark'ta bırakıp sayfayı yenilersek dark olarak, light'ta bırakıp sayfayı yenilersek light olarak yükler //
 
-import { createContext, useState, useEffect, useContext } from "react";
+// import { createContext, useState, useEffect, useContext } from "react";
 
-const ThemeContext = createContext();
+// const ThemeContext = createContext();
 
-export const ThemeProvider = ({ children }) => {
+// export const ThemeProvider = ({ children }) => {
 
-    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light")
+//     const [theme, setTheme] = useState(localStorage.getItem("theme") || "light")
 
-    useEffect(() => {
-        localStorage.setItem("theme", theme)
-    }, [theme])
+//     useEffect(() => {
+//         localStorage.setItem("theme", theme)
+//     }, [theme])
 
-    const values = {
-        theme,
-        setTheme,
-    }
+//     const values = {
+//         theme,
+//         setTheme,
+//     }
 
-    return <ThemeContext.Provider value={values}>
-        {children}
-    </ThemeContext.Provider>
-}
+//     return <ThemeContext.Provider value={values}>
+//         {children}
+//     </ThemeContext.Provider>
+// }
 
-export const useTheme = () => useContext(ThemeContext)
+// export const useTheme = () => useContext(ThemeContext)
