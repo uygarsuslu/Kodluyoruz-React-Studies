@@ -25,43 +25,17 @@
 
 // ********** MULTI CONTEXT ********** //
 
-import { useContext } from 'react'
-
-import Button from "./Button";
-import Header from "./Header";
-
-import ThemeContext from "../context/ThemeContext";
-import Profile from './Profile';
-
-function Container() {
-
-    const { theme } = useContext(ThemeContext)
-
-    return (
-        <div className={`app ${theme}`}>
-            <Button />
-            <hr />
-            <Header />
-            <hr />
-            <Profile />
-        </div>
-    )
-}
-export default Container
-
-/* ******************************************************************************************************* */
-
-// ********** CUSTOM CONTEXT HOOK ********** //
+// import { useContext } from 'react'
 
 // import Button from "./Button";
 // import Header from "./Header";
 
-// import { useTheme } from "../context/ThemeContext";
+// import ThemeContext from "../context/ThemeContext";
 // import Profile from './Profile';
 
 // function Container() {
 
-//     const { theme } = useTheme()
+//     const { theme } = useContext(ThemeContext)
 
 //     return (
 //         <div className={`app ${theme}`}>
@@ -74,3 +48,29 @@ export default Container
 //     )
 // }
 // export default Container
+
+/* ******************************************************************************************************* */
+
+// ********** CUSTOM CONTEXT HOOK ********** //
+
+import Button from "./Button";
+import Header from "./Header";
+
+import { useTheme } from "../context/ThemeContext";
+import Profile from './Profile';
+
+function Container() {
+
+    const { theme } = useTheme()
+
+    return (
+        <div className={`app ${theme}`}>
+            <Button />
+            <hr />
+            <Header />
+            <hr />
+            <Profile />
+        </div>
+    )
+}
+export default Container
