@@ -5,10 +5,10 @@
 // import Button from "./components/Button";
 
 // // provider = sağlayıcı //
-// // render edilen bütün komponentlere provide edilen bütün dataları gönderebilmem gerekiyor //
 
 // function App() {
 //   return (
+//     // burada child olarak render edilen componentlere "ThemeContext"ten sağlanan bütün dataları gönderir
 //     <ThemeContext.Provider value="dark">
 //       <Button />
 //     </ThemeContext.Provider>
@@ -27,9 +27,6 @@
 // // import ThemeContext from './context/ThemeContext';
 // import { ThemeProvider } from './context/ThemeContext';
 
-// // provider = sağlayıcı //
-// // render edilen bütün komponentlere provide edilen bütün dataları gönderebilmem gerekiyor //
-
 // function App() {
 //   return (
 //     <ThemeProvider>
@@ -43,7 +40,7 @@
 
 /* ******************************************************************************************************* */
 
-// ********** THEME SWİTCHER ********** //
+// ********** THEME SWİTCHER - CONTEXT PROVIDER SIDE EFFECTS ********** //
 
 // import './App.css';
 // import Container from './components/Container';
@@ -65,17 +62,13 @@
 
 /* ******************************************************************************************************** */
 
-// ********** MULTI CONTEXT ********** //
+// ********** MULTI CONTEXT - CUSTOM CONTEXT HOOK ********** //
 
 import './App.css';
 import Container from './components/Container';
 
-// import ThemeContext from './context/ThemeContext';
 import { ThemeProvider } from './context/ThemeContext';
 import { UserProvider } from "./context/UserContext";
-
-// provider = sağlayıcı //
-// render edilen bütün komponentlere provide edilen bütün dataları gönderebilmem gerekiyor //
 
 function App() {
   return (
