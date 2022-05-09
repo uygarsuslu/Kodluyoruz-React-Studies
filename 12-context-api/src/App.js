@@ -1,5 +1,7 @@
 // ********** CONTEXT OLUŞTURMAK ********** //
 
+// herhangi bir state'i başka bir component'te kullanmak için iç içe - alt alta prop olarak göndermemize gerek kalmaz
+
 // import './App.css';
 // import ThemeContext from './context/ThemeContext';
 // import Button from "./components/Button";
