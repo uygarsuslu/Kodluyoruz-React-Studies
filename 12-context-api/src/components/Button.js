@@ -46,7 +46,10 @@
 
 // ********** CUSTOM CONTEXT HOOK ********** //
 
+// context'i import etmeden ve useContext işleminden kurtulduk
+
 import { useTheme } from "../context/ThemeContext";
+// import ThemeContext from "../context/ThemeContext";
 
 function Button() {
 

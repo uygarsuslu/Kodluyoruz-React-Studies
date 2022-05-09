@@ -86,6 +86,8 @@
 
 // **********  CUSTOM CONTEXT HOOK ********** //
 
+// useContext işlemini burada yaptık
+
 import { createContext, useState, useEffect, useContext } from "react";
 
 const ThemeContext = createContext();
@@ -108,5 +110,5 @@ export const ThemeProvider = ({ children }) => {
     </ThemeContext.Provider>
 }
 
-// export default ThemeContext
 export const useTheme = () => useContext(ThemeContext)
+// export default ThemeContext

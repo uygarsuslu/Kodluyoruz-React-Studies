@@ -18,6 +18,8 @@
 
 // ********** CUSTOM CONTEXT HOOK ********** //
 
+// useContext işlemini burada yaptık
+
 import { createContext, useState, useContext } from "react";
 
 const UserContext = createContext();
@@ -32,3 +34,4 @@ export const UserProvider = ({ children }) => {
 }
 
 export const useUser = () => useContext(UserContext)
+// export default UserContext

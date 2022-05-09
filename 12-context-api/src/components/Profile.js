@@ -46,9 +46,12 @@
 
 // ********** CUSTOM CONTEXT HOOK ********** //
 
+// context'i import etmeden ve useContext işleminden kurtulduk
+
 import { useState } from 'react'
 
 import { useUser } from "../context/UserContext";
+// import UserContext from "../context/UserContext";
 
 function Profile() {
 

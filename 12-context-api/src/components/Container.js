@@ -53,10 +53,14 @@
 
 // ********** CUSTOM CONTEXT HOOK ********** //
 
+// context'i import etmeden ve useContext işleminden kurtulduk
+
 import Button from "./Button";
 import Header from "./Header";
 
 import { useTheme } from "../context/ThemeContext";
+// import ThemeContext from "../context/ThemeContext";
+
 import Profile from './Profile';
 
 function Container() {
