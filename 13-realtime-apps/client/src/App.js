@@ -1,3 +1,6 @@
+// npm i socket.io
+// npm start
+
 import './App.css';
 
 import Palette from './components/Palette';
