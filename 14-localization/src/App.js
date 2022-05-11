@@ -1,3 +1,5 @@
+// npm i react-intl
+
 import './App.css';
 
 // aktif dil neyse onu tutması için //
@@ -32,8 +34,11 @@ function App() {
 
   return (
     <div className="App">
+
+      {/* Bu Provider'dan data sağlanıyor */}
       <IntlProvider locale={locale} messages={messages[locale]}>
 
+        {/* FormattedMessage'ın çalışabilmesi için IntlProvider'a ihtiyacımız var */}
         <FormattedMessage id="title" />
         <p>
           <FormattedMessage id="description" values={{ count: 5 }} />
@@ -48,6 +53,4 @@ function App() {
     </div >
   );
 }
-
-
 export default App;
