@@ -1,3 +1,6 @@
+// render ile herhangi bir componenti render edebiliriz
+// screen ile DOM'da olan herhangi bir nesneyi yakalayabiliriz
+
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
@@ -7,8 +10,9 @@ describe("Counter Tests", () => {
 
     let increaseBtn, decreaseBtn, count;
 
-    // beforeEach describe ifadesini kullandığımız zaman birden fazla test yazabiliyoruz, bu noktada ilk test edilecek kısımdan önce beforeEach'i çalıştır en yukarda tanımladığımız increaseBtn, decreaseBtn, count'u tanımla yani doldur sonra alttaki increase btn'yi çalıştır diyoruz increase btn bittikten sonra tekrar beforeEach'i çalıştır sonra ikinci testi çalıştır diyoruz. Eğer üçüncü bir test olsaydı önce beforeEach'i çalıştıracak sonra da üçüncü test kodu neyse onu çalıştıracaktı.
+    // // beforeEach describe ifadesini kullandığımız zaman birden fazla test yazabiliyoruz, bu noktada ilk test edilecek kısımdan önce beforeEach'i çalıştır en yukarda tanımladığımız increaseBtn, decreaseBtn, count'u tanımla yani doldur sonra alttaki increase btn'yi çalıştır diyoruz increase btn bittikten sonra tekrar beforeEach'i çalıştır sonra ikinci testi çalıştır diyoruz. Eğer üçüncü bir test olsaydı önce beforeEach'i çalıştıracak sonra da üçüncü test kodu neyse onu çalıştıracaktı.
 
+    // her testten önce çalışıyor //
     beforeEach(() => {
         console.log("her testten once calisacagim");
         render(<Counter />);
@@ -32,6 +36,8 @@ describe("Counter Tests", () => {
         console.log("en son bir kere calisacagim");
     })
 
+    // ****************************************************************************************************************** //
+
     it("increase btn", () => {
         userEvent.click(increaseBtn)
         expect(count).toHaveTextContent("1")
@@ -47,7 +53,12 @@ describe("Counter Tests", () => {
 // ***** YUKARIDA KODU DAHA DERLİ TOPLU YAPAN DESCRIBE KULLANILDI ***** //
 
 // burda it("increase btn") bir açıklama. Test patladığında hangi testin patladığını o açıklama sayesinde görüyoruz. Bunu test("increase btn") şeklinde de yazabiliriz.
-// daha sonra bir callback fonksiyon yazıyoruz. Bunun içerisinde de yapmak istediğimiz test otomasyonunu yazarız //
+// daha sonra bir callback fonksiyon yazıyoruz. Bunun içerisinde de yapmak istediğimiz test otomasyonunu yazarız 
+
+// import { render, screen } from "@testing-library/react";
+// import userEvent from "@testing-library/user-event";
+
+// import Counter from "./index";
 
 // it("increase btn", () => {
 //     render(<Counter />);
@@ -59,7 +70,7 @@ describe("Counter Tests", () => {
 
 //     userEvent.click(increaseBtn) // butona tıklattırdık //
 
-//     expect(count).toHaveTextContent("1")  // sonrasında ise butona tıklattıktan sonra ne bekliyorsam onu yazacağız //
+//     expect(count).toHaveTextContent("1")  // butona tıklattıktan sonra ne bekliyorsam onu yazacağız //
 // });
 
 // it("decrease btn", () => {
@@ -72,5 +83,5 @@ describe("Counter Tests", () => {
 
 //     userEvent.click(decreaseBtn) // butona tıklattırdık //
 
-//     expect(count).toHaveTextContent("-1")  // sonrasında ise butona tıklattıktan sonra ne bekliyorsam onu yazacağız //
+//     expect(count).toHaveTextContent("-1")  // butona tıklattıktan sonra ne bekliyorsam onu yazacağız //
 // });

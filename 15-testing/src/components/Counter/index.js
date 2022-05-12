@@ -12,4 +12,5 @@ function Counter() {
         </div>
     )
 }
+
 export default Counter
