@@ -9,7 +9,9 @@ const defaultItems = [
 function Todo() {
 
     const [text, setText] = useState("");
+    
     const [items, setItems] = useState(defaultItems); // uygulamamızın içindeki elemanları tutacak //
+
     const addItem = () => {
         setItems((prev) => [...prev, { name: text }]);
         setText("");

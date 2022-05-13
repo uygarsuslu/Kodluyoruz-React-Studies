@@ -8,6 +8,7 @@ describe("Todo Testleri", () => {
 
     let button, input;
 
+    // her testten önce çalışıyor //
     beforeEach(() => {
         render(<Todo />);
 
@@ -31,14 +32,16 @@ describe("Todo Testleri", () => {
     // input'a girilen değerin listede var olup olmadığını test eder //
     test("Inputa string girilip butona basılınca listeye eklenmeli", () => {
 
-        // input'u doldur //
+        // input'u doldur
         const name = "Uygar";
-        userEvent.type(input, name);
+        
+        //input'a ekler
+        userEvent.type(input, name); // hangi inputa, ne yazılacak
 
-        // buton tıkla //
+        // buton tıkla
         userEvent.click(button);
 
-        // kontrol et //
+        // kontrol et
         expect(screen.getByText(name)).toBeInTheDocument();
     })
 
