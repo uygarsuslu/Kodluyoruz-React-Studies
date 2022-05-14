@@ -1,3 +1,6 @@
+// her bir birimin kendi içinde doğru çalışıp çalışmadığını otomatize ettirecek kodu yazdırabiliriz
+// her component'in kendi içinde doğru çalıştığına emin olmamız gerek
+
 import './App.css';
 
 // import Counter from "./components/Counter";
@@ -11,8 +14,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
-
-// her bir birimin kendi içinde doğru çalışıp çalışmadığını otomatize ettirecek kodu yazdırabiliriz //
-// her component'in kendi içinde doğru çalıştığına emin olmamız gerek //
